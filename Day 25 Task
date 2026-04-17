@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Practice</title>
+</head>
+<body>
+
+    <h2>Mini Project</h2>
+
+    <!-- Input box -->
+    <input type="text" id="myInput" placeholder="Type something...">
+
+    <!-- Button -->
+    <button id="myBtn">Show Text</button>
+
+    <!-- Output -->
+    <p id="output">Result: </p>
+
+    <script>
+        // using const (value won't change)
+        const input = document.getElementById("myInput");
+        const button = document.getElementById("myBtn");
+        const output = document.getElementById("output");
+
+        // function with default parameter
+        function showText(text = "No input given") {
+            // template literal used here
+            output.textContent = Result: ${text};
+        }
+
+        // event listener
+        button.addEventListener("click", () => {
+            // using let (value can change)
+            let userText = input.value;
+
+            showText(userText); // call function
+        });
+    </script>
+
+</body>
+</html>
